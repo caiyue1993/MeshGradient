@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "MeshGradient",
+    name: "CustomMeshGradient",
 	platforms: [
 		.macOS(.v10_15),
 		.iOS(.v13),
@@ -12,14 +12,14 @@ let package = Package(
 	],
     products: [
         .library(
-            name: "MeshGradient",
+            name: "CustomMeshGradient",
             targets: ["MeshGradient"]),
 		.library(name: "MeshGradientCHeaders",
 				 targets: ["MeshGradientCHeaders"]),
     ],
     targets: [
         .target(
-            name: "MeshGradient",
+            name: "CustomMeshGradient",
             dependencies: ["MeshGradientCHeaders"],
 			resources: [.copy("DummyResources/")]
 		),
